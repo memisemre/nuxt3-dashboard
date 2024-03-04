@@ -9,9 +9,4 @@ import Sidebar from '~/components/Sidebar.vue';
 </template>
 
 <style lang="scss">
-div{
-  h1{
-    color: red;
-  }
-}
 </style>

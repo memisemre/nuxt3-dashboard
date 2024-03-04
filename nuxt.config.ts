@@ -1,4 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   vite: {
     server: {
@@ -7,5 +6,12 @@ export default defineNuxtConfig({
       },
     },
   },
-  devtools: { enabled: true }
+  devtools: { enabled: true },
+  css: [
+    'bootstrap/dist/css/bootstrap.css',
+    'assets/main.scss'
+  ],
+  plugins: [
+    { src: '~/plugins/bootstrap.js', mode: 'client' }
+  ]
 })

@@ -8,5 +8,10 @@ import Sidebar from '~/components/Sidebar.vue';
   </div>
 </template>
 
-<style>
+<style lang="scss">
+div{
+  h1{
+    color: red;
+  }
+}
 </style>

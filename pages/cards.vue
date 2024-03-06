@@ -1,0 +1,3 @@
+<template>
+    Cards Page
+</template>

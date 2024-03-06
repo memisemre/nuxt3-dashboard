@@ -1,11 +1,11 @@
-const Items = [
+const MenuItems = [
   {
     title: "Overview",
     url: "/",
   },
   {
     title: "Cards",
-    url: "/invoices",
+    url: "/cards",
   },
   {
     title: "Transactions",
@@ -25,4 +25,4 @@ const Items = [
   },
 ];
 
-export default Items;
+export default MenuItems;

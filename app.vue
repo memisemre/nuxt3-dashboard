@@ -1,7 +1,9 @@
 <script>
-  import Sidebar from './components/Sidebar.vue';
 </script>
+
 <template>
-  <Sidebar />
-  <NuxtPage />
+    <div id="app" class="d-flex">
+        <Sidebar />
+        <NuxtPage />
+    </div>
 </template>

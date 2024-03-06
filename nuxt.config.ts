@@ -13,5 +13,12 @@ export default defineNuxtConfig({
   ],
   plugins: [
     { src: '~/plugins/bootstrap.js', mode: 'client' }
-  ]
+  ],
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+    },
+  ],
+
 })

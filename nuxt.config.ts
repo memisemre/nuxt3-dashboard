@@ -5,6 +5,13 @@ export default defineNuxtConfig({
         usePolling: true, 
       },
     },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@use "~/assets/_colors.scss" as *;'
+        }
+      }
+    }
   },
   devtools: { enabled: true },
   css: [
@@ -17,8 +24,7 @@ export default defineNuxtConfig({
   components: [
     {
       path: '~/components',
-      pathPrefix: false,
+      global: true
     },
   ],
-
 })

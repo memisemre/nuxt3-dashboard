@@ -1,15 +1,28 @@
 <script setup>
-    import SidebarItem from './SidebarItem.vue';
     import MenuItems from '~/utils/menuItems';
 </script>
+
 <template>
-        <div class="sidebar">
-          <p>Sidebar</p>
-          <SidebarItem v-for="(item,index) in MenuItems" :item="item" :indexKey="index"/>
+    <div class="sidebar">
+        <div class="wrapper">
+            <Logo />
+
+            <SidebarItem v-for="item in MenuItems" :item="item">
+                <template #icon>
+                    <component :is="item.icon"/>
+                </template>
+            </SidebarItem>
+
         </div>
-      </template>
+    </div>
+</template>
+
 <style lang="scss">
     .sidebar{
-        color: red;
+        padding: 2rem;
+        border-right: 2px solid red;
+        height: 100vh;
+        max-width: 280px;
+        width: 100%;
     }
 </style>

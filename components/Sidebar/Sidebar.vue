@@ -1,18 +1,24 @@
 <script setup>
-    import MenuItems from '~/utils/menuItems';
+import { ref } from 'vue';
+
+const MenuItems = ref(null);
+
+const { data } = await useFetch('/api/menu');
+
+MenuItems.value = data._rawValue.items;
 </script>
+
 
 <template>
     <div class="sidebar">
         <div class="wrapper">
             <Logo />
-
-            <SidebarItem v-for="item in MenuItems" :item="item">
+            
+            <SidebarItem v-if="MenuItems !== null" v-for="item in MenuItems" :item="item">
                 <template #icon>
                     <component :is="item.icon"/>
                 </template>
             </SidebarItem>
-
         </div>
     </div>
 </template>

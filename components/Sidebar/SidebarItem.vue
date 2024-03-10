@@ -15,7 +15,7 @@
     const props = defineProps({
         item: Object
     });
-    
+
     const {title,url} = props.item;
 </script>
 
@@ -41,7 +41,6 @@
                 font-weight: bold; 
 
                 p{
-                    margin-bottom: 0;
                     color: $gray;
                 }
 

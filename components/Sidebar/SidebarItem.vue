@@ -12,7 +12,10 @@
 </template>
 
 <script setup>
-    const props = defineProps(['item']);
+    const props = defineProps({
+        item: Object
+    });
+    
     const {title,url} = props.item;
 </script>
 
